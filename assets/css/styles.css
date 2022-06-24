@@ -1,0 +1,134 @@
+/* General settigns */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    color: #0A1C1E;
+}
+
+  h1,h2,h3{
+    font-weight: 600;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color:#0A1C1E ;
+  }
+
+/* main section  */
+.main-grid   {
+    background-color: #DDDDDD;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1600px;
+    display: grid;
+    grid-template-areas: 
+    "Head Head Head"
+    "Aside Main Main"
+    "Footer Footer Footer";
+    gap: 1em;
+  }
+
+header {
+    grid-area: Head;
+    text-align: center;
+    background-color: #7D5BA6;
+    color: #fff;
+  }
+
+/* aside menu */
+  aside {
+    grid-area: Aside;
+    padding-top: 1em;
+  }
+  aside ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 2em;
+  }
+  aside li {
+    display: flex;
+    justify-content: space-between;
+    list-style:none;
+    border-bottom: 1px solid #FC6471;
+    padding: 1em 1em;
+    cursor: pointer;
+  }
+  li i {
+    color: #FC6471;
+    margin-left: 0.5em;
+  }
+  aside li span {
+    font-size: 0.8em;
+    color: rgb(151, 151, 151);
+  }
+  /* product grid  */
+  main {
+    grid-area: Main;
+    padding: 3em 1em;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1.6em auto;
+  }
+  /* product cards  */
+  .card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0.5em 0 0.5em 0;
+    padding-top: 1em;
+  }
+  
+  .card img {
+    width: 80%;
+    height: 25em;
+  }
+
+  .card h3 {
+    margin: 1rem 0;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+
+
+  footer {
+    grid-area: Footer;
+    padding: 3em 0;
+  }
+
+  /* special sections settings  */
+  .card .ebook {
+    background-color: #7D5BA6;
+    color: #fff;
+  }
+  .card .audible {
+    background-color: aqua;
+    color:#0A1C1E;
+  }
+  .card .comic {
+    background-color: #A4FC65;
+  }
+  
+  .card .music {
+    background-color: #FC6471;
+    color: #fff;
+  }
